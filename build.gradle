@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group 'dwx.tech.res'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+sourceSets.main.java.srcDirs= ['src/main/java']
+sourceSets.main.resources.srcDirs = ['src/main/resources']
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+    maven { url "http://maven.oschina.net/content/groups/public/" }
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
